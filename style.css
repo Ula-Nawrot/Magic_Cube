@@ -6,7 +6,7 @@
 }
   @media (max-width: 768px) { 
     :root {
-        --cube-translation: 20vw;
+        --cube-translation: 20vw; /*vh changed to vw*/
         --cube-translation-hover: 30vw;
         --width-scene: 40vw;
         
