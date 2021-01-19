@@ -3,9 +3,7 @@
     --cube-translation-hover: 30vh;
     --width-scene: 40vh;
     --transition-hover: 1s;
-  }
-
-
+}
   @media (max-width: 768px) { 
     :root {
         --cube-translation: 20vw;
@@ -14,6 +12,7 @@
    }
 
 body{
+    margin: 0;
     background-image: linear-gradient(to right top, #99aebb, #8aa9bc, #79a5bd, #67a0bd, #519cbe, #4793b5, #3c8bab, #3182a2, #35748e, #37657a, #375867, #354a54);
     background-attachment: fixed;
     width: 100vw;
@@ -21,8 +20,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    align-items: center
 }
 
 #scena
@@ -127,49 +125,47 @@ div.bottom:hover{
 }
 
 /*Modal Window*/
+  
+  /* -------------------------- */
+  /* CLASSES TO MAKE MODAL WORK */
+  
+  
+  .modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    /* background-color: rgb(219, 245, 255); */
+    padding: 4rem;
+    
+    /* box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3); */
+    z-index: 10;   
+  }
+  .hidden {
+    display: none;
+  }
   .close-modal {
     position: absolute;
     top: 1.2rem;
     right: 2rem;
     font-size: 3rem;
-    color: #333;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     border: none;
     background: none;
   }
-  
-  /* -------------------------- */
-  /* CLASSES TO MAKE MODAL WORK */
-  .hidden {
-    display: none;
-  }
-  
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-  
-    background-color: rgb(219, 245, 255);
-    padding: 6rem;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;   
-  }
   iframe {
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
     /* width: 560px;
     height: 315px; */
-    width: 600px;
-    height: 375px;
+    width: 1280px;
+    height: 720px;
     
   }
   .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.459);
