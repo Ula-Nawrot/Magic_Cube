@@ -3,7 +3,7 @@
 const modal = document.querySelector('.modal'); // we store object in a variable, to be able more easly select that obect
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.front');
+const btnsOpenModal = document.querySelector('.front');
 
 //defining functions
 const closeModal = function() {
