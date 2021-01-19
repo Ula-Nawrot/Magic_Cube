@@ -1,0 +1,156 @@
+:root {
+    --cube-translation: 20vh;
+    --cube-translation-hover: 30vh;
+    --width-scene: 40vh;
+  }
+
+
+  @media (max-width: 576px) { 
+    :root {
+        --cube-translation: 20vw;
+        --width-scene: 40vw;
+      }
+    
+   }
+
+body{
+    background-image: linear-gradient(to right top, #99aebb, #8aa9bc, #79a5bd, #67a0bd, #519cbe, #4793b5, #3c8bab, #3182a2, #35748e, #37657a, #375867, #354a54);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#scena
+{
+    width: var(--width-scene);
+    height: var(--width-scene);
+    border: 1px solid #CCC; 
+    perspective: 1000px;
+
+}
+#kostka
+{
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;    
+    animation: obracaniekostki 30s ease-in-out infinite alternate;
+    
+}
+.sciana
+{
+    opacity: 0.95;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+}
+/* .responsive:hover{
+    transform: translateZ(20px);
+} */
+div.front{ 
+    transform: translateZ(var(--cube-translation));
+}
+div.front:hover{
+    transform: translateZ(var(--cube-translation-hover));
+}
+
+div.back{
+    transform: rotateY(180deg) translateZ(var(--cube-translation));
+}
+div.back:hover{
+    transform: rotateY(180deg) translateZ(var(--cube-translation-hover));
+}
+
+div.left{
+    transform: rotateY(-90deg) translateZ(var(--cube-translation));
+}
+div.left:hover{
+    transform: rotateY(-90deg) translateZ(var(--cube-translation-hover));
+}
+
+div.right{
+    transform: rotateY(90deg) translateZ(var(--cube-translation));
+}
+div.right:hover{
+    transform: rotateY(90deg) translateZ(var(--cube-translation-hover));
+}
+
+div.top{
+    transform: rotateX(90deg) translateZ(var(--cube-translation));
+}
+div.top:hover{
+    transform: rotateX(90deg) translateZ(var(--cube-translation-hover));
+}
+
+div.bottom{
+    transform: rotateX(-90deg) translateZ(var(--cube-translation));
+}
+div.bottom:hover{
+    transform: rotateX(-90deg) translateZ(var(--cube-translation-hover));
+}
+
+@keyframes obracaniekostki
+{
+    from
+    {
+    }
+    to
+    {
+        transform: rotateY(720deg) rotateX(180deg) rotateZ(180deg);
+    }
+}
+
+/*Modal Window*/
+  .close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  /* -------------------------- */
+  /* CLASSES TO MAKE MODAL WORK */
+  .hidden {
+    display: none;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  
+    background-color: rgb(219, 245, 255);
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;   
+  }
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
