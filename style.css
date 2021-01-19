@@ -137,10 +137,7 @@ div.bottom:hover{
     justify-content: center;
     align-items: center;
     width: 1280px;
-    /* background-color: rgb(219, 245, 255); */
     padding: 4rem;
-    
-    /* box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3); */
     z-index: 10;   
   }
   .hidden {
@@ -158,8 +155,6 @@ div.bottom:hover{
   }
   iframe {
     position: relative;
-    /* width: 560px;
-    height: 315px; */
     width: 1280px;
     height: 720px;
     
@@ -171,4 +166,57 @@ div.bottom:hover{
     background-color: rgba(0, 0, 0, 0.459);
     backdrop-filter: blur(3px);
     z-index: 5;
+  }
+
+  @media screen and (max-width: 1500px) {
+    iframe {
+        width: 870px;
+        height: 470px;       
+      }
+      .modal{
+        width: 870px;
+        padding: 4rem;
+      }
+  }
+
+  @media screen and (max-width: 1000px) {
+    iframe {
+        width: 560px;
+        height: 315px;   
+      }
+      .modal{
+        width: 560px;
+        padding: 4rem;
+      }
+  }
+  @media screen and (max-width: 700px) {
+    iframe {
+        width: 427px;
+        height: 240px;   
+      }
+      .modal{
+        width: 427px;
+        padding: 4rem;
+      }
+  }
+
+  @media screen and (max-width: 576px) {
+    iframe {
+        width: 300px;
+        height: 170px;   
+      }
+      .modal{
+        width: 300px;
+        padding: 0;
+      }
+      .close-modal{
+        font-size: 1.5rem;
+        top: -1.3rem;
+        right: -1.3rem;
+      }
+  }
+  @media screen and (max-width: 320px){
+      body{
+          display: none;
+      }
   }
