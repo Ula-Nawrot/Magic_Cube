@@ -18,6 +18,7 @@ const openModal = function() {
 
 
 //opening modal window after clicking on a button
+
 btnsOpenModal[0].addEventListener('click', function (){
     openModal()
 });
