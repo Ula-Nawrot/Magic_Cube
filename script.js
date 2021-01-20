@@ -20,6 +20,7 @@ const openModal = function() {
 //opening modal window after clicking on a button
 
 btnsOpenModal[0].addEventListener('click', function (){
+    document.getElementById("iframeID").src = "https://www.youtube.com/embed/ApfLlubBZ7A";
     openModal()
 });
 

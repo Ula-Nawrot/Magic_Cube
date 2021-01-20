@@ -20,6 +20,7 @@ body{
     margin: 0;
     background-image: linear-gradient(to right top, #99aebb, #8aa9bc, #79a5bd, #67a0bd, #519cbe, #4793b5, #3c8bab, #3182a2, #35748e, #37657a, #375867, #354a54);
     background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
     
     
 }
@@ -176,6 +177,58 @@ div.bottom:hover{
     z-index: 5;
   }
 
+  footer{
+      height: 30px;
+      margin-top: -30px;
+      background-color: #3182a2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #E2F5F1;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+      }
+      
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color:#E6F4F1;
+        color: #2a3b42;
+        text-align: left;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 6px;
+        width: 290px;
+        /* Position the tooltip text*/
+        position: absolute;
+        z-index: 1;
+        
+        bottom: 115%;
+        left: 50%;
+        margin-left: -145px; /* Use half of the width (120/2 = 60), to center the tooltip */
+      }
+      
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+      .tooltip:hover{
+          /* color: wheat; */
+          cursor: pointer;
+          color: #E2F5F1;
+      }
+
   @media screen and (max-width: 1500px) {
     iframe {
         width: 870px;
@@ -221,6 +274,9 @@ div.bottom:hover{
         font-size: 1.5rem;
         top: -1.3rem;
         right: -1.3rem;
+      }
+      .tooltip .tooltiptext{
+        margin-left: -195px;
       }
   }
   @media screen and (max-width: 320px){
