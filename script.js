@@ -9,7 +9,7 @@ const btnsOpenModal = document.querySelectorAll('.sciana');
 const closeModal = function() {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
-    document.getElementById("iframeID").src = null;
+    document.getElementById("iframeID").src = "";
 };
 const openModal = function() {
     modal.classList.remove('hidden');
