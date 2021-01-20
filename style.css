@@ -170,6 +170,8 @@ div.bottom:hover{
     z-index: 5;
   }
 
+ 
+
   @media screen and (max-width: 1500px) {
     iframe {
         width: 870px;
