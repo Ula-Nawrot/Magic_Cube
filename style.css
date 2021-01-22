@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root {
     --cube-translation: 20vh;
     --cube-translation-hover: 30vh;
@@ -12,6 +13,8 @@
         
       }
    }
+
+
 html,body{
     height: 100%;
     margin: 0;
@@ -21,8 +24,6 @@ body{
     background-image: linear-gradient(to right top, #99aebb, #8aa9bc, #79a5bd, #67a0bd, #519cbe, #4793b5, #3c8bab, #3182a2, #35748e, #37657a, #375867, #354a54);
     background-attachment: fixed;
     font-family: "Times New Roman", Times, serif;
-    
-    
 }
 
 #content {
@@ -59,9 +60,9 @@ body{
     width: 100%;
     height: auto;
 }
-/* .responsive:hover{
-    transform: translateZ(20px);
-} */
+
+/* Making a cube, after pointing on a wall, it moves upwards */
+
 div.front{ 
     transform: translateZ(var(--cube-translation));
     transition: var(--transition-hover);
@@ -122,6 +123,8 @@ div.bottom:hover{
     cursor: pointer;
 }
 
+/* ANIMATION OF A CUBE */
+
 @keyframes obracaniekostki
 {
     from
@@ -133,11 +136,7 @@ div.bottom:hover{
     }
 }
 
-/*Modal Window*/
-  
-  /* -------------------------- */
-  /* CLASSES TO MAKE MODAL WORK */
-  
+/*MODAL WINDOW*/
   
   .modal {
     position: absolute;
@@ -176,6 +175,8 @@ div.bottom:hover{
     backdrop-filter: blur(3px);
     z-index: 5;
   }
+
+/* FOOTER AND TOOLTIP*/
 
   footer{
       height: 30px;
@@ -228,6 +229,8 @@ div.bottom:hover{
           cursor: pointer;
           color: #E2F5F1;
       }
+
+/* MEDIA QUERY FOR VIDEOS */
 
   @media screen and (max-width: 1500px) {
     iframe {

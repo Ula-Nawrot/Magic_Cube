@@ -17,7 +17,7 @@ const openModal = function() {
 };
 
 
-//opening modal window after clicking on a button
+//opening modal window after clicking on a wall with a photo
 
 btnsOpenModal[0].addEventListener('click', function (){
     document.getElementById("iframeID").src = "https://www.youtube.com/embed/ApfLlubBZ7A";
@@ -54,7 +54,6 @@ btnsOpenModal[5].addEventListener('click', function (){
 
 //closing modal window after clicling x, around the modal window and Escape key
 btnCloseModal.addEventListener('click', closeModal); //nie wywołujemy tutaj tej funkcji w ten sposób: closeModal(), bo wtedy byłaby ona wywołana po otworzeniu strony
-
 overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')){
